@@ -22,6 +22,6 @@ head(DataSubset)
 if(!file.exists("Graphics")) dir.create("Graphics")
 png(filename = './Graphics/plot1.png', width = 480, height = 480, units='px')
 # plot figure
-with(subSetData, hist(as.numeric(subSetData$Global_active_power), xlab = 'Global Active Power (kilowatt)', main = 'Global Active Power', col = 'red'))
-#Close device
+with(DataSubset, hist(as.numeric(DataSubset$Global_active_power), xlab = 'Global Active Power (kilowatt)', main = 'Global Active Power', col = 'red'))
+ #Close device
 dev.off()
