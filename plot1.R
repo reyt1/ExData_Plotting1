@@ -12,9 +12,11 @@ unzip('./data/household_power_consumption.zip', exdir = './data')
 # Plot 1
 # open device
 if(!file.exists("Graphics")) dir.create("Graphics")
-png(filename = './Graphics/plot1.png', width = 480, height = 480, units='px')
+png(filename = "./Graphics/plot1.png", width = 480, height = 480, units="px")
 # plot figure
-with(data, hist(Global_active_power, xlab = 'Global Active Power (kilowatt)', main = 'Global Active Power', col = 'red'))
+with(data, hist(Global_active_power,  xlab = "Global Active Power (kilowatt)",
+                                      main = "Global Active Power", 
+                                      col = "red"))
 # close device
 dev.off()
 
